@@ -80,15 +80,17 @@ DESC media_types;
 
 SELECT * FROM media_types;
 
-
-UPDATE media_types SET name = REPLACE (name , 'consequuntur', 'audio');
-UPDATE media_types SET name = REPLACE (name , 'atque', 'video');
-UPDATE media_types SET name = REPLACE (name , 'accusantium', 'image');
-UPDATE media_types SET name = REPLACE (name , 'vonseqtur', 'photo');
-UPDATE media_types SET name = REPLACE (name , 'in', 'games');
+UPDATE
+	media_types
+SET
+	name = REPLACE (name , 'consequuntur', 'audio'),
+	name = REPLACE (name , 'atque', 'video'),
+	name = REPLACE (name , 'accusantium', 'image'),
+	name = REPLACE (name , 'vonseqtur', 'photo'),
+	name = REPLACE (name , 'in', 'games');
 
 UPDATE media SET
-	media_type_id = FLOOR(1 + RAND() * 5); -- обновляем столбец media_type_id в media
+	media_type_id = FLOOR(1 + RAND() * 5); -- Г®ГЎГ­Г®ГўГ«ГїГҐГ¬ Г±ГІГ®Г«ГЎГҐГ¶ media_type_id Гў media
 	
 SELECT * FROM media;
 
@@ -116,7 +118,7 @@ INSERT INTO friendship_statuses (name) VALUES
 	('Rejected');
 
 UPDATE friendship SET
-	friendship_status_id = FLOOR(1 + RAND() * 3); -- обновляем столбец friendship_status_id в friendship
+	friendship_status_id = FLOOR(1 + RAND() * 3); -- Г®ГЎГ­Г®ГўГ«ГїГҐГ¬ Г±ГІГ®Г«ГЎГҐГ¶ friendship_status_id Гў friendship
 
 -- -----communities----
 	
